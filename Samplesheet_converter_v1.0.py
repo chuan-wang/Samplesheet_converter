@@ -9,21 +9,27 @@
 # Date,None
 # Investigator Name,Chuan Wang
 # Experiment Name,Project_001
+# [Reads]
+# 151
+# 151
 # [Data]
-# Lane,SampleID,SampleName,SamplePlate,SampleWell,index,Project,Description
-# 1,Sample_101,101,HGWT5ALXX,1:1,SI-GA-A1,Project_001,
+# Lane,SampleID,SampleName,SamplePlate,SampleWell,index,index2,Project,Description
+# 1,Sample_101,101,HGWT5ALXX,1:1,SI-GA-A1,,Project_001,
 # ------------------------------------------------------------------------------------------------------
 # Modified samplesheet:
 # [Header]
 # Date,None
 # Investigator Name,Chuan Wang
 # Experiment Name,Project_001
+# [Reads]
+# 151
+# 151
 # [Data]
-# Lane,SampleID,SampleName,SamplePlate,SampleWell,index,Project,Description
-# 1,Sample_101_S1,101_S1,HGWT5ALXX,1:1,GGTTTACT,Project_001,
-# 1,Sample_101_S2,101_S2,HGWT5ALXX,1:1,CTAAACGG,Project_001,
-# 1,Sample_101_S3,101_S3,HGWT5ALXX,1:1,TCGGCGTC,Project_001,
-# 1,Sample_101_S4,101_S4,HGWT5ALXX,1:1,AACCGTAA,Project_001,
+# Lane,SampleID,SampleName,SamplePlate,SampleWell,index,index2,Project,Description
+# 1,Sample_101_S1,101_S1,HGWT5ALXX,1:1,GGTTTACT,,Project_001,
+# 1,Sample_101_S2,101_S2,HGWT5ALXX,1:1,CTAAACGG,,Project_001,
+# 1,Sample_101_S3,101_S3,HGWT5ALXX,1:1,TCGGCGTC,,Project_001,
+# 1,Sample_101_S4,101_S4,HGWT5ALXX,1:1,AACCGTAA,,Project_001,
 # ------------------------------------------------------------------------------------------------------
 
 # Samplesheet_convert_v1.0
@@ -48,7 +54,7 @@ def modify_samplesheet(inputfile,indexlibrary):
     with open(inputfile,mode='r') as org:
         samplesheet = csv.reader(org)
         for row in samplesheet:
-            if len(row) != 8:
+            if len(row) != 9:
                 modified_samplesheet.append(row)
             elif row[5] not in index_library:
                 modified_samplesheet.append(row)
