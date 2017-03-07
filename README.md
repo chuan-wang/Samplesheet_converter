@@ -6,7 +6,7 @@
 ### Example:
 Script:
 ```
-main.py -i <inputfile> -o <outputfile> -x <indexlibrary>
+python main.py -i <inputfile> -o <outputfile> -x <indexlibrary>
 ```
 Original samplesheet:
 ```
